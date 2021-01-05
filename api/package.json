@@ -2,18 +2,13 @@
   "name": "ts-base-api",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/Puffycheeses/ts-base",
+  "repository": "https://github.com/pfych/discord-slash-serverless",
   "license": "MIT",
   "scripts": {
     "api:serverless-offline": "serverless offline",
-    "api:serverless-debug": "node --inspect ./node_modules/serverless/bin/serverless.js offline start -s dev",
-    "codegen": "graphql-codegen --config codegen.yml"
+    "api:serverless-debug": "node --inspect ./node_modules/serverless/bin/serverless.js offline start -s dev"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "1.17.4",
-    "@graphql-codegen/introspection": "1.17.4",
-    "@graphql-codegen/typescript": "1.17.4",
-    "@graphql-codegen/typescript-resolvers": "^1.17.4",
     "@types/node": "^14.0.24",
     "copy-webpack-plugin": "^6.0.3",
     "dotenv-webpack": "^2.0.0",
@@ -28,13 +23,6 @@
     "webpack-node-externals": "^2.5.1"
   },
   "dependencies": {
-    "@graphql-codegen/typed-document-node": "^1.17.6",
-    "@graphql-tools/graphql-file-loader": "^6.0.15",
-    "@graphql-tools/load": "^6.0.15",
-    "@graphql-tools/mock": "^6.0.15",
-    "@graphql-tools/schema": "^6.0.15",
-    "@graphql-tools/stitch": "^6.0.15",
-    "@graphql-typed-document-node/core": "^3.0.0",
     "@types/aws-lambda": "^8.10.59",
     "@types/serverless": "^1.72.5",
     "apollo-server": "^2.16.0",
@@ -42,10 +30,6 @@
     "awesome-typescript-loader": "^5.2.1",
     "aws-lambda": "^1.0.6",
     "aws-xray-sdk-core": "^3.1.0",
-    "graphql": "^15.3.0",
-    "graphql-config": "^3.0.3",
-    "graphql-import": "^1.0.2",
-    "graphql-tools": "^6.0.15",
     "http-status-codes": "^1.4.0",
     "raw-loader": "^4.0.1",
     "serverless": "^1.75.1",

@@ -1,8 +1,0 @@
-overwrite: true
-schema: './schema.graphql'
-generates:
-  ./src/gql-types.ts:
-    plugins:
-      - 'typescript'
-      - 'typescript-resolvers'
-      - 'typed-document-node'

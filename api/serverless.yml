@@ -18,7 +18,3 @@ functions:
     handler: ping/ping.pong
     events:
       - http: GET ping
-  graphql:
-    handler: graphql/graphql.handler
-    events:
-      - http: POST graphql
