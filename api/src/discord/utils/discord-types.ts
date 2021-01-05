@@ -22,13 +22,25 @@ export interface ApplicationCommandInteractionData {
 
 export interface ApplicationCommandInteractionDataOption {
   name: string;
-  value?: string | number;
+  value?: string | number | boolean;
   options: ApplicationCommandInteractionDataOption[]
 }
 
-/** @deprecated incomplete! Update!! */
 export interface GuildMember {
-  id: string;
-  username: string;
-  discriminator: string;
+  deaf: boolean;
+  is_pending: boolean;
+  joined_at: string;
+  mute: boolean;
+  nick: string;
+  pending: boolean;
+  permissions: string;
+  premium_since?: string;
+  roles: string[];
+  user: {
+    avatar: string;
+    discriminator: string;
+    id: string;
+    public_flags: number;
+    username: string;
+  }
 }
