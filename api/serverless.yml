@@ -1,20 +1,35 @@
-service: ts-base
+service: discord-slash-serverless
 provider:
   name: aws
   runtime: nodejs12.x
+  profile: default
+  region: ap-southeast-2
+
 custom:
+  customDomain:
+    domainName: api.pfy.ch
+    basePath: ''
+    stage: ${self:provider.stage}
+    createRoute53Record: true
   functionsBasePath: src
   webpack:
     webpackConfig: 'webpack.config.js'
     includeModules:
       packagePath: 'package.json'
     packager: 'npm'
+
 plugins:
   - serverless-functions-base-path
   - serverless-webpack
   - serverless-offline
+  - serverless-domain-manager
+
 functions:
   ping:
     handler: ping/ping.pong
     events:
-      - http: GET ping
+      - http: GET pingpong
+  discordSlash:
+    handler: discord/discord.handler
+    events:
+      - http: POST discord

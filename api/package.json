@@ -9,7 +9,7 @@
     "api:serverless-debug": "node --inspect ./node_modules/serverless/bin/serverless.js offline start -s dev"
   },
   "devDependencies": {
-    "@types/node": "^14.0.24",
+    "@types/node": "^14.14.20",
     "copy-webpack-plugin": "^6.0.3",
     "dotenv-webpack": "^2.0.0",
     "nodemon": "^2.0.4",
@@ -33,7 +33,9 @@
     "http-status-codes": "^1.4.0",
     "raw-loader": "^4.0.1",
     "serverless": "^1.75.1",
+    "serverless-domain-manager": "^5.1.0",
     "serverless-webpack": "^5.3.3",
+    "tweetnacl": "^1.0.3",
     "webpack": "^4.44.1"
   }
 }
