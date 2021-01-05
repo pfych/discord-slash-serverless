@@ -22,7 +22,7 @@ export interface ApplicationCommandInteractionData {
 
 export interface ApplicationCommandInteractionDataOption {
   name: string;
-  value?: unknown;
+  value?: string | number;
   options: ApplicationCommandInteractionDataOption[]
 }
 
